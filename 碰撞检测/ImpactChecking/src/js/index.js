@@ -44,15 +44,32 @@ window.onload = function () {
     var context = canvasEl.getContext("2d"),
         balls = [];
 
-    for (var i = 1; i <= 100; i++) {
+    // balls.push(new BallObj(
+    //     10,
+    //     100,
+    //     10,
+    //     10,
+    //     0,
+    //     1000
+    // ));
+    // balls.push(new BallObj(
+    //     screenWidth - 20,
+    //     100,
+    //     20,
+    //     5,
+    //     Math.PI,
+    //     80000
+    // ));
+
+    for (var i = 1; i <= 10; i++) {
         var random = Math.random();
         balls.push(new BallObj(
             screenWidth * random, // x
             screenHeight * random, // y
-            5 + 10 * random, // r
+            5 + 20 * random, // r
             2 + 2 * random, // v
             45 / 180 * Math.PI * i, 10, // d
-            5 + 10 * random // m
+            5 + 8000 * random // m
         ));
     }
 
